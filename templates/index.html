@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="SJ">
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <title>홀로홀로 쇼핑몰</title>
+
+    <!--구글폰트-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+    <!--폰트어썸-->
+    <script src="https://kit.fontawesome.com/a00753d868.js" crossorigin="anonymous">
+    </script>
+
+    <!--JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+
+    <!--<script src="{{ url_for('static', filename='script.js') }}">-->
+    <!--</script>-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+
+    <script type="text/javascript" src="{{url_for('static', filename='script.js') }}">
+    </script>
+
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="order_wrap">
+
+        <div class="order_form">
+
+          <div class="product_info">
+            <img src="{{ url_for('static', filename='product_img.png') }}" class="product_img">
+
+            <div class="info">
+              <h2>크리스마스트리</h2>
+              <p>
+                <span class="discount">
+                  <i class="fa fa-percent "></i>
+                  10%
+                </span>
+              </p>
+              <p class="price">
+                <span class="pre_price">999,999원</span>
+                <i class="fa fa-angle-double-right"></i>
+                <span class="pro_price">99,999원</span>
+              </p>
+              <p class="rate_box">원-달러 환율: <span id="rate"></span></p>
+              <div class="product_desc">
+                <p>
+                  <br>
+                  벽에 간단히 걸어<br> 크리스마스 분위기를 내보세요!<br>
+                  많은 공간을 차지하지 않아<br> 좁은 곳에서도 사용해볼 수 있어요.<br>
+                  선물로도 손색없는 베베데코 벽트리
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+        <div class="container">
+          <div class="order_form-input">
+
+            <div class="textbox">
+              <label for="name_input">이름</label>
+              <input type="text" id="name_input" placeholder="이름을 적어주세요.">
+            </div>
+
+            <div class="textbox">
+              <label for="name_input">수량</label>
+              <select id="count">
+                <option value="index">수량을 고르세요.</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <div class="textbox">
+              <label for="name_input">주소</label>
+              <input type="text" id="addr_input" placeholder="주소를 적어주세요.">
+            </div>
+
+            <div class="textbox">
+              <label for="name_input">전화번호</label>
+              <input type="text" id="tel_input" placeholder="010-0000-0000 형식">
+            </div>
+
+            <button class="order_btn" onclick="order()">주문하기</button>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="orders_wrap">
+      <table class="table" class="table">
+        <thead>
+        <tr>
+          <th>이름</th>
+          <th>수량</th>
+          <th>주소</th>
+          <th>번호</th>
+        </tr>
+        </thead>
+        <tbody id="orders_table">
+        <tr>
+          <td>정석진</td>
+          <td>2</td>
+          <td>하남시</td>
+          <td>010-1222-2323</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,154 @@
+
+body {
+    font-family: 'Song Myung', serif;
+    cursor: default;
+}
+
+h2 {
+    text-align: right;
+    font-size: 35px;
+    color: #401a6b;
+    margin: 10px 0;
+}
+
+p {
+    text-align: right;
+    margin: 5px 0;
+}
+b{
+    color: coral;
+}
+.rate_box{
+    color: darkblue;
+}
+
+.wrap {
+    background: url("/static/background4.png") center/cover;
+    height: 700px;
+    padding: 30px;
+
+}
+
+.orders_wrap {
+    text-align: center;
+    width: 350px;
+    margin: auto;
+
+}
+
+.order_wrap {
+
+    margin: auto;
+    width: 600px;
+    align-items: center;
+
+}
+
+.product_img {
+    height: 300px;
+
+}
+
+.product_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    margin-left: 20px;
+    text-align: right;
+}
+.discount{
+    font-size: 10px;
+    border: 1px solid #401a6b;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #401a6b;
+    color: white;
+}
+.pre_price{
+    text-decoration: line-through;
+    color: dimgray;
+}
+
+.price{
+    margin: 0px 0;
+    font-size: 20px;
+}
+.product_desc{
+    background-color: dimgray;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+    width: 250px;
+    height: 140px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.order_form-input{
+    width: 300px;
+}
+.order_form {
+    margin-left: 10px;
+}
+
+.divider {
+    margin: 10px 0;
+    border: 1px solid #474642;
+}
+.textbox{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px;
+}
+#count {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid;
+    width: 205px;
+    height: 25px;
+}
+
+.textbox input {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid;
+    width: 200px;
+    height: 20px;
+}
+.textbox input:focus::placeholder{
+    color: transparent;
+}
+.order_btn{
+    margin:0 45% ;
+    width: 100px;
+    padding: 7px;
+    background: #401a6b;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+.order_btn:hover{
+    background: chocolate;
+}
+
+.textbox label{
+    text-align: center;
+    top: 1px;
+    left: 1px;
+}
+
+.table {
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+}
